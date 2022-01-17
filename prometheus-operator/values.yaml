@@ -1,0 +1,7 @@
+kube-prometheus-stack:
+  nameOverride: "prometheus-stack"
+  fullnameOverride: "prometheus-stack"
+  prometheus:
+    prometheusSpec:
+      serviceMonitorSelectorNilUsesHelmValues: false
+      probeSelectorNilUsesHelmValues: false

@@ -1,0 +1,13 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  labels:
+    app: example-app
+  name: example-app
+spec:
+  endpoints:
+    - path: /metrics
+      port: web
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: example-app-svc
